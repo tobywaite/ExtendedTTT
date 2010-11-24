@@ -1,7 +1,7 @@
 
 public class QLearner extends Agent{
 
-	public QLearner(int size) {
+	public QLearner(int size, TTTMove team) {
 		// TODO Auto-generated constructor stub
 	}
 

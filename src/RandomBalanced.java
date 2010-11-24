@@ -1,7 +1,7 @@
 
 public class RandomBalanced extends Agent {
 
-	public RandomBalanced(int size) {
+	public RandomBalanced(int size, TTTMove team) {
 		// TODO Auto-generated constructor stub
 	}
 

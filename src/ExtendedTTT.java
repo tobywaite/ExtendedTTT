@@ -23,8 +23,8 @@ public class ExtendedTTT {
 	public ExtendedTTT(int size, int games) {
 		numGames = games;
 		boardSize = size;
-		agent = new QLearner(size);
-		opponent = new RandomBalanced(size);
+		agent = new QLearner(size, TTTMove.X);
+		opponent = new RandomBalanced(size, TTTMove.O);
 	}
 
 	public static void main(String[] args) {
@@ -72,7 +72,7 @@ public class ExtendedTTT {
 		for(int i = 0; i < evalGames; i++){
 			Game testGame = new Game(boardSize, agent, opponent);
 			testGame.test();
-			if(testGame.getState()==GameState.Won)
+			if(testGame.getState()==GameState.XWin)
 				wins++;
 		}
 		System.out.println(gamesPlayed + "\t\t\t\t" + (double)wins/evalGames);
